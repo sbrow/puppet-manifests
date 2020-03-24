@@ -1,3 +1,6 @@
-# Requires
+# Requirements
+
 ## Windows
-- puppetlabs-chocolatey
+```bash
+$ puppet module install puppetlabs-chocolatey
+```
