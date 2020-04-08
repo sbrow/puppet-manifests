@@ -24,12 +24,19 @@ package {'vscode':}
 
 # Chat
 package {'discord':}
-package {'skype':}
+# Skype is pre-installed on windows
+if $facts['os']['name'] != 'windows' {
+  package {'skype':}
+}
 
 # Other
 package {'f.lux':}
 package {'joplin':}
 package {'teamviewer':}
-package {'virtualbox':
-  ensure => '6.1.2'
+# package {'virtualbox':
+#   ensure => '6.1.2'
+# }
+
+if $facts['os']['name'] == 'windows' {
+  include puppetmanifests::windows
 }

@@ -1,2 +1,2 @@
-#Include CapsLockCtrlEscape.ahk
-#Include gaming.ahk
+#Include ./CapsLockCtrlEscape.ahk
+#Include ./gaming.ahk

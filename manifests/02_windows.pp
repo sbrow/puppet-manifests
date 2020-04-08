@@ -1,4 +1,4 @@
-if $facts['os']['name'] == 'windows' {
+class puppetmanifests::windows {
   # Install Aquasnap
   package {'aquasnap': }
 
@@ -12,21 +12,25 @@ if $facts['os']['name'] == 'windows' {
     owner  => $user,
   }
 
-  file {"${home}/AHKScripts/CapsLockCtrlEscape.ahk":
-    ensure => 'file',
+  $files = 'C:/ProgramData/PuppetLabs/code/environments/production/modules/puppetmanifests/files'
+
+  file {"${documents}/AHKScripts/CapsLockCtrlEscape.ahk":
     owner  => $user,
-    source => 'puppet://modules/puppetmanifests/windows/CapsLockCtrlEscape.ahk'
+    source => "${files}/windows/CapsLockCtrlEscape.ahk",
   }
-  file {"${home}/AHKScripts/gaming.ahk":
-    ensure => 'file',
+  file {"${documents}/AHKScripts/gaming.ahk":
     owner  => $user,
-    source => 'puppet://modules/puppetmanifests/windows/gaming.ahk'
+    source => "${files}/windows/gaming.ahk"
   }
-  file {"${home}/AHKScripts/main.ahk":
-    ensure => 'file',
+  file {"${documents}/AHKScripts/main.ahk":
     owner  => $user,
-    source => 'puppet://modules/puppetmanifests/windows/main.ahk'
+    source => "${files}/windows/main.ahk"
   }
 
-  # TODO: set main.ahk to run on startup
+  $startup = "${home}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup"
+  # set main.ahk to run on startup
+  file {"${startup}/main.ahk":
+    ensure => 'link',
+    target => "${documents}/AHKScripts/main.ahk"
+  }
 }
