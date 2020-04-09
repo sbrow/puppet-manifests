@@ -1,12 +1,9 @@
 class puppetmanifests::windows {
-  # Install Aquasnap
   package {'aquasnap': }
-
   # TODO: Install Aquasnap license
-
-  # Install AutoHotKey scripts
   package {'autohotkey': }
 
+  # Install AutoHotKey scripts
   file { "${documents}/AHKScripts":
     ensure => 'directory',
     owner  => $user,
