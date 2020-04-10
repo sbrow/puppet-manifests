@@ -52,6 +52,13 @@ package {'virtualbox':
   ensure => '6.1.2'
 }
 
+# Enable puppet agent
+service { 'puppet':
+  ensure   => 'running',
+  enable   => true,
+  provider => 'launchd',
+}
+
 if $facts['os']['name'] == 'windows' {
   include puppetmanifests::windows
 }
