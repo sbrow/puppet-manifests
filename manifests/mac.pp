@@ -1,4 +1,4 @@
-class puppetmanifests::mac {
+class mac {
   package { 'cleanmymac':
     # Updates itself
     ensure => 'present'
