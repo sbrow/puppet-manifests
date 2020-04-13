@@ -1,0 +1,8 @@
+version: '3'
+services: 
+  puppet:
+    image: puppetlabs/puppetserver-standalone
+    ports: 
+    - 8140:8140
+    volumes: 
+    - './:/etc/puppetlabs/code/envrionments/production'
