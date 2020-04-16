@@ -1,4 +1,9 @@
-node 'durandal.epfgames.com' {
+node 'durandal.local' {
   include common
   include windows
+}
+
+node 'wafflemaker.local' {
+  include common
+  include mac
 }

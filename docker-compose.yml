@@ -1,8 +1,9 @@
-version: '3'
-services: 
+version: '3.0'
+services:
   puppet:
+    hostname: puppet
     image: puppetlabs/puppetserver-standalone
-    ports: 
-    - 8140:8140
-    volumes: 
-    - './:/etc/puppetlabs/code/envrionments/production'
+    ports:
+      - 8140:8140
+    volumes:
+      - './:/etc/puppetlabs/code/environments/production'
