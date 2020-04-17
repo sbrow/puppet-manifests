@@ -4,14 +4,13 @@ class common {
         include chocolatey
         Package {
           ensure => latest,
-          provider => 'chocolatey'
+          provider => chocolatey
         }
       }
       'Darwin': {
-        include homebrew
         Package {
           ensure => latest,
-          provider => 'homebrew'
+          provider => homebrew
         }
       }
       default: {
@@ -23,23 +22,23 @@ class common {
 
   # Browsers
   package {'firefox':}
-  package {'google chrome':
-    name => 'googlechrome'
-  }
+  package { lookup('google-chrome'): }
 
   # IDEs
-  package {'vscode':}
+  package { lookup('vscode'): }
 
   # Chat
   package {'discord':}
   if $facts['os']['name'] != 'windows' {
     # Skype is pre-installed on windows
-    package {'skype':}
+    package {'skype': }
   }
 
   # Other
   package {'f.lux':}
-  package {'joplin':}
+  package {'joplin':
+    ensure => present,
+  }
   package {'teamviewer':}
   package {'virtualbox':
     ensure => '6.1.2'
@@ -47,8 +46,8 @@ class common {
 
   # Enable puppet agent
   service { 'puppet':
-    ensure   => 'running',
-    enable   => true,
-    provider => 'launchd',
+    ensure => 'running',
+    enable => true,
+    # provider => 'launchd',
   }
 }
