@@ -2,7 +2,7 @@ version: '3.0'
 services:
   puppet:
     hostname: puppet
-    image: puppetlabs/puppetserver-standalone
+    image: puppet/puppetserver-standalone
     ports:
       - 8140:8140
     volumes:
