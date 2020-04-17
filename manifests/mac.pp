@@ -1,6 +1,7 @@
 class mac {
   package { 'cleanmymac':
     # Updates itself
-    ensure => 'present'
+    ensure => present,
+    provider => homebrew
   }
 }
