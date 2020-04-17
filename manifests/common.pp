@@ -41,7 +41,7 @@ class common {
   }
   package {'teamviewer':}
   package {'virtualbox':
-    ensure => '6.1.2'
+    ensure => lookup('virtualbox')['ensure']
   }
 
   # Enable puppet agent
