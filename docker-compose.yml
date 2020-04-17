@@ -3,6 +3,8 @@ services:
   puppet:
     hostname: puppet
     image: puppet/puppetserver-standalone
+    environment:
+      - DNS_ALT_NAMES=puppet.local
     ports:
       - 8140:8140
     volumes:
