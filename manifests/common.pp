@@ -35,7 +35,9 @@ class common {
   }
 
   # Other
-  package {'f.lux':}
+  package {'f.lux':
+    name => lookup('f.lux')
+  }
   package {'joplin':
     ensure => present,
   }
