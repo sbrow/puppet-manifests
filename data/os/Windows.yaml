@@ -1,5 +1,5 @@
 ---
 flux: f.lux
-google-chrome: google chrome
+google-chrome: googlechrome
 virtualbox:
   ensure: 6.1.2
