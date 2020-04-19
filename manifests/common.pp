@@ -52,4 +52,10 @@ class common {
     enable => true,
     # provider => 'launchd',
   }
+
+  file_line { 'puppet.conf':
+    path => lookup('puppet.conf'),
+    line => 'runinterval = 1800',
+    match => '^runinterval\\s*='
+  }
 }

@@ -2,3 +2,5 @@
 flux: flux
 google-chrome: google-chrome
 vscode: vscode
+puppet:
+  conf: /etc/puppetlabs/puppet/puppet.conf
