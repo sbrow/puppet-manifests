@@ -1,2 +1,4 @@
-modules
 .idea/
+.resource_types/
+modules/
+.rerun.json
