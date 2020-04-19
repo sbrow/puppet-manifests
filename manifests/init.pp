@@ -7,3 +7,7 @@ node 'wafflemaker.local' {
   include common
   include mac
 }
+
+node 'puppet.local' {
+  include plex
+}
