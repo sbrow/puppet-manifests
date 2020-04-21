@@ -1,10 +1,15 @@
-node 'durandal.local' {
-  include common
+include common
+
+node 'durandal.epfgames.com' {
+  Package {
+    provider => chocolatey
+  }
+  include sbrow
   include windows
 }
 
 node 'wafflemaker.local' {
-  include common
+  include sbrow
   include mac
 }
 
