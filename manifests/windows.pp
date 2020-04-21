@@ -1,4 +1,7 @@
 class windows {
+  Package {
+    provider => lookup('provider')
+  }
   package {'aquasnap': }
   # TODO: Install Aquasnap license
   package {'autohotkey': }

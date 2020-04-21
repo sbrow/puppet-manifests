@@ -1,4 +1,5 @@
 ---
+provider: homebrew
 vscode: visual-studio-code
 virtualbox:
   ensure: 6.1.2,135662
