@@ -2,5 +2,9 @@
 flux: flux
 google-chrome: google-chrome
 vscode: vscode
+virtualbox:
+  ensure: latest
 puppet:
   conf: /etc/puppetlabs/puppet/puppet.conf
+users:
+  sbrow: sbrow

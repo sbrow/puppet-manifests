@@ -2,7 +2,7 @@
 provider: chocolatey
 flux: f.lux
 google-chrome: googlechrome
-virtualbox:
-  ensure: 6.1.2
 puppet:
   conf: 'C:/ProgramData/PuppetLabs/puppet/etc/puppet.conf'
+users:
+  sbrow: Spencer

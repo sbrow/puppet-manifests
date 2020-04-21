@@ -4,7 +4,7 @@ class sbrow {
     provider => lookup('provider')
   }
 
-  user { 'sbrow':
+  user { lookup('users.sbrow'):
     ensure => present,
   }
   # Browsers
