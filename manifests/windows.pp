@@ -6,6 +6,8 @@ class windows {
   # TODO: Install Aquasnap license
   package {'autohotkey': }
 
+  package {'virtualbox': }
+
   $user = "Spencer"
   $scripts = "C:/Users/${user}/AHKScripts"
   # Install AutoHotKey scripts
