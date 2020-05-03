@@ -1,6 +1,7 @@
 ---
 flux: flux
 google-chrome: google-chrome
+jetbrains-toolbox: jetbrains-toolbox
 vscode: vscode
 virtualbox:
   ensure: latest

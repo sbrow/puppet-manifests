@@ -12,6 +12,7 @@ class sbrow {
   package { lookup('google-chrome'): }
 
   # IDEs
+  package { lookup('jetbrains-toolbox'): }
   package { lookup('vscode'): }
 
   # Chat

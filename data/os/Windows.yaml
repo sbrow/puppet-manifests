@@ -2,6 +2,7 @@
 provider: chocolatey
 flux: f.lux
 google-chrome: googlechrome
+jetbrains-toolbox: jetbrainstoolbox
 puppet:
   conf: 'C:/ProgramData/PuppetLabs/puppet/etc/puppet.conf'
 users:
