@@ -7,7 +7,11 @@ class mac {
     source => 'https://dl.devmate.com/com.macpaw.CleanMyMac4/CleanMyMacX.dmg',
   }
 
-  package { 'gpg-suite': }
+  package { 'gpg-suite':
+    ensure => latest,
+    provider => homebrew
+  }
+
   file { '/Users/sbrow/.gnupg/gpg-agent.conf':
     content => 'pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
 enable-ssh-support
