@@ -33,4 +33,5 @@ class sbrow {
   package {'virtualbox':
     ensure => lookup('virtualbox')['ensure']
   }
+  package {'consul':}
 }
